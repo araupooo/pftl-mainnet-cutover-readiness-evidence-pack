@@ -1,0 +1,2 @@
+{"result":{"account":"rrrrrrrrrrrrrrrrrrrrBZbvji","error":"actNotFound","error_code":19,"error_message":"Account not found.","ledger_hash":"21EA1C5EBDBAF54C63AEB99DA38A2B43C07B1DB2C11D29F8EF3356F9E05E09C3","ledger_index":8273717,"request":{"account":"rrrrrrrrrrrrrrrrrrrrBZbvji","command":"account_info","ledger_index":"validated"},"status":"error","validated":true}}
+

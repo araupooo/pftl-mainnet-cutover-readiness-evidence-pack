@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PFTL Mainnet Cutover Readiness — Evidence Pack</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 880px; margin: 2em auto; padding: 0 1em; color: #1a1a1a; line-height: 1.55; }
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.25em; margin-top: 1.6em; border-bottom: 1px solid #ddd; padding-bottom: .2em; }
+  table { border-collapse: collapse; width: 100%; margin: .6em 0; }
+  th, td { border: 1px solid #ccc; padding: .4em .6em; text-align: left; vertical-align: top; }
+  th { background: #f2f2f2; }
+  .verdict { background: #fdecea; border: 1px solid #d33; padding: .8em 1em; font-size: 1.1em; }
+  .crit { color: #a00; font-weight: bold; }
+  .high { color: #b60; font-weight: bold; }
+  code { background: #f4f4f4; padding: 0 .25em; }
+  .small { color: #555; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>PFTL Mainnet Cutover Readiness — Evidence Pack</h1>
+<p class="small">Measured 2026-11-22 (first probe 14:09–14:21 UTC, canonical re-probe 15:42–15:43 UTC, cadence re-run 15:44–15:54 UTC). Assessment only:
+no cutover performed, no mainnet touched, no funds spent, nothing signed.</p>
+
+<div class="verdict"><strong>Verdict: NOT READY for mainnet cutover.</strong>
+2 CRITICAL + 4 HIGH findings, 13 of 26 claims explicitly unresolved, 0 of 15 audit gates closed.
+The live testnet itself is healthy — the cutover is not ready.</div>
+
+<h2>Headline numbers (live testnet, network 2025)</h2>
+<table>
+<tr><th>Measurement</th><th>Value</th></tr>
+<tr><td>Build / network / state</td><td>postfiatd 1.0.9, network_id 2025, <code>full</code>, 21 peers</td></tr>
+<tr><td>Validated ledger</td><td>seq 8,273,715 (probe), complete 8,200,054–8,273,715</td></tr>
+<tr><td>Ledger cadence</td><td>198 ledgers / 600 s, mean close interval 3.030 s</td></tr>
+<tr><td>Validation quorum</td><td>17 of UNL 25 (67% formula; code says revert to 80% for mainnet)</td></tr>
+<tr><td>Validators / UNL</td><td>66 validators, 25 UNL (all 1.0.9, all domains verified)</td></tr>
+<tr><td>Stale UNL member</td><td>1 of 25 at 0.00000 24h agreement (~3 days behind)</td></tr>
+<tr><td>Genesis supply reconciliation</td><td>100B PFT = 96,999,999,999.99988 (genesis) + 2,999,999,966.55832 (other accounts) + 33.4418 burned — closes exactly</td></tr>
+<tr><td>Amendments</td><td>101 known, 64 enabled (RPC <code>feature</code> == VHS vote endpoint, exact name match); all 64 enabled at ledger 86785, 2026-02-09</td></tr>
+<tr><td>PostFiat-native amendments</td><td><code>PF_ValidatorVoteTracking</code> and <code>PF_AccountExclusion</code> NOT enabled</td></tr>
+<tr><td>Fees</td><td>base 10 drops, median 5000, queue 0/2000</td></tr>
+<tr><td>Amendment vote-replay test</td><td>PR #53 open, unmerged, <code>mergeable_state: unstable</code></td></tr>
+<tr><td>External audit</td><td>none recorded for either codebase</td></tr>
+<tr><td>1:1 conversion</td><td>no mechanism for the live testnet; the only documented path (ERC-20 PFT on Base) is an l1v2 design, nothing on Base mainnet</td></tr>
+<tr><td>Mainnet date</td><td>none published anywhere</td></tr>
+</table>
+
+<h2>Findings by severity</h2>
+<table>
+<tr><th>ID</th><th>Severity</th><th>Finding</th><th>Status</th></tr>
+<tr><td>F01</td><td class="crit">CRITICAL</td><td>No mainnet date and no decided mainnet ordering</td><td>UNRESOLVED</td></tr>
+<tr><td>F02</td><td class="crit">CRITICAL</td><td>No 1:1 testnet-to-mainnet conversion mechanism exists for the live testnet</td><td>UNRESOLVED</td></tr>
+<tr><td>F03</td><td class="high">HIGH</td><td>Amendment-dependent readiness blocked: vote-replay test PR unmerged; PostFiat-native amendments not enabled</td><td>UNRESOLVED</td></tr>
+<tr><td>F04</td><td class="high">HIGH</td><td>No external audit of either codebase; migration/rollback gate open</td><td>UNRESOLVED</td></tr>
+<tr><td>F05</td><td class="high">HIGH</td><td>Mainnet quorum must change: testnet runs a 67% quorum the code says to revert to 80% for mainnet</td><td>OPEN</td></tr>
+<tr><td>F06</td><td class="high">HIGH</td><td>UNL is centrally administered; no published mainnet UNL-transition procedure</td><td>UNRESOLVED</td></tr>
+<tr><td>F07</td><td>MEDIUM</td><td>One UNL member is stale (0.00000 24h agreement); 12 non-UNL validators run old builds</td><td>MEASURED</td></tr>
+<tr><td>F08</td><td>MEDIUM</td><td>Rollback against a real cutover is untested; no cutover has ever been performed</td><td>UNRESOLVED</td></tr>
+<tr><td>F09</td><td>MEDIUM</td><td>Public observability gaps: explorer health failing, topology link count 0, WebSocket stream not publicly subscribable</td><td>MEASURED</td></tr>
+<tr><td>F10</td><td>LOW</td><td>Public validator counts disagree; homepage snapshot two months stale</td><td>MEASURED</td></tr>
+<tr><td>F11</td><td>LOW</td><td>Cosmetic divergence: postfiatd still reports the native currency code as “XRP” in source</td><td>MEASURED</td></tr>
+<tr><td>F12</td><td>INFO</td><td>Verified healthy: genesis supply reconciles exactly; ledger advancing steadily; amendment state agrees across two independent sources</td><td>VERIFIED</td></tr>
+</table>
+
+<h2>Documents</h2>
+<ul>
+<li><a href="decision-memo.md">Decision memo</a> — verdict, what is true, what blocks the cutover, what would change it.</li>
+<li><a href="claim-index.md">Claim-to-evidence index</a> — 26 claims; 13 explicitly unresolved.</li>
+<li><a href="runbook.md">Validator onboarding, UNL-transition, and rollback runbook</a> — validated where stated, marked unvalidated where it is not.</li>
+<li><a href="audit-gates.md">Audit-gating checklist</a> — 15 severity-scored gates; 0 closed.</li>
+<li><a href="citations.md">Citations</a> — every pinned primary source.</li>
+<li><a href="methodology.md">Methodology</a> — how each number was produced, and limitations.</li>
+<li><a href="evidence-index.md">Evidence index</a> — every claim traced to an unedited output.</li>
+</ul>
+
+<h2>Reproduce</h2>
+<pre><code>bash scripts/run_all.sh          # fresh probes + 21-sample cadence + analysis
+bash scripts/verify_digests.sh   # SHA256SUMS check (must pass)
+bash scripts/clean_reproduce.sh  # fresh-environment run; exits 0 only if all checks pass</code></pre>
+<p class="small">Requirements: <code>curl</code>, <code>git</code>, <code>python3</code> (standard library only).
+No credentials, no accounts, no signing. All endpoints are public.
+Two systems are kept apart throughout: the live testnet (postfiatd, network 2025 — measured)
+and the l1v2 design (postfiatl1v2, Consensus v2 — specified, not observed live).</p>
+</body>
+</html>

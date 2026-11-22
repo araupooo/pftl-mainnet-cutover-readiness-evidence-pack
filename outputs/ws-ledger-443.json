@@ -1,0 +1,7 @@
+{
+ "target": "wss://rpc.testnet.postfiat.org:443",
+ "label": "ledger-443",
+ "utc": "2026-11-22T15:56:03Z",
+ "result": "error",
+ "error": "SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)')"
+}

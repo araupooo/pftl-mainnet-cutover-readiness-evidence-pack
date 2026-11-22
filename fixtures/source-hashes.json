@@ -1,0 +1,70 @@
+{
+ "repo_pins": {
+  "postfiatd": "0085a1ff885d6a446369cf73a4430f75af22be55",
+  "validator-history-service": "d301c4ce78e109f1771d4429e17876a97e2654f3",
+  "postfiatl1v2": "071b6dc461efc7a9105b2d3cac6acd3686901e7d",
+  "explorer": "74161a20f200b6ad093e9d6d884fc4c370acb93c"
+ },
+ "source_file_sha256": {
+  "postfiatd/include/xrpl/protocol/SystemParameters.h": {
+   "sha256": "1ddb7af3e76708103ed5a43320fbeceeaa9b95ed06a436020790a12c55226fcc",
+   "bytes": 3242
+  },
+  "postfiatd/src/xrpld/app/ledger/Ledger.cpp": {
+   "sha256": "8c56833ab46470050f355c06efec642ed4054209ffcb63084aca9da734f82516",
+   "bytes": 33022
+  },
+  "postfiatd/src/xrpld/app/misc/detail/ValidatorList.cpp": {
+   "sha256": "a1499c9c0f43be56ea657b2940701a38898117fb0dbdf83cf481de65cad503d4",
+   "bytes": 72746
+  },
+  "postfiatd/src/xrpld/app/misc/detail/AmendmentTable.cpp": {
+   "sha256": "17442288c19bbf1cf0da1a85e596e3add6218757ec91a22f353cd03e2edbaf33",
+   "bytes": 34890
+  },
+  "postfiatd/include/xrpl/protocol/detail/features.macro": {
+   "sha256": "c564926fa081d8ef09f65976f66f8e712cecf58ee1c68e0abf58345eea00e772",
+   "bytes": 10479
+  },
+  "postfiatd/cfg/postfiatd-mainnet-full.cfg": {
+   "sha256": "c51d6921272214e46079a3481702689152074802afe2f49840a18eb1148928b3",
+   "bytes": 56450
+  },
+  "postfiatd/cfg/postfiatd-testnet-full.cfg": {
+   "sha256": "c5c78d51648b0188f9c5b8b6ae52f745876076dc9f75329b3c1a239ac002ec79",
+   "bytes": 56580
+  },
+  "validator-history-service/src/shared/utils/config.ts": {
+   "sha256": "658391029417a31cd3d4549e39829697e9575cbd7de80e42534fb25bcd67ccfc",
+   "bytes": 3324
+  },
+  "postfiatl1v2/docs/security/index.md": {
+   "sha256": "0e4873e8b5f0210147abbbcd3b5b9c454afc0748d1aa10138562cb8f67dff761",
+   "bytes": 6384
+  },
+  "postfiatl1v2/docs/status/network-status.md": {
+   "sha256": "6c2cad2bbfd2db52e30ae004f64c2e128fc6aa334f4461f094856b1e87fc1d54",
+   "bytes": 9098
+  },
+  "postfiatl1v2/docs/architecture/pft-token-on-base.md": {
+   "sha256": "edca95ab33d0e29e432908576cc6cfa3eddc89b38d1bbd7b791eb83a3dc3168a",
+   "bytes": 18058
+  },
+  "postfiatl1v2/docs/architecture/genesis-external-lanes.md": {
+   "sha256": "c3bb7981f9d7bec1b0711a41888146599bd620f7f4c2a083a2a54cb1535e4c7c",
+   "bytes": 91922
+  },
+  "postfiatl1v2/docs/architecture/l1v2-testnet-genesis-and-launch-spec.md": {
+   "sha256": "d3011c08469ae9137d3562269cbf6bb21f11e7aacf84abc2337c834a111b9c90",
+   "bytes": 26384
+  },
+  "postfiatl1v2/docs/architecture/launch-topology-thresholds.md": {
+   "sha256": "cb3429dd1f9de614d78f34b685abed9e56ce6be5ae4449302071ecf458a5ea50",
+   "bytes": 11522
+  },
+  "postfiatl1v2/docs/status/release-gate-inventory.md": {
+   "sha256": "5852dbd55c5b6ae85547be658657fba6a9610cab11824b8740de0dff45f36b86",
+   "bytes": 9466
+  }
+ }
+}

@@ -1,0 +1,6 @@
+{"sample": 1, "utc": "2026-11-22T15:56:49.500764+00:00", "seq": 8273998, "hash": "788C8E36172814549A62A95D5DB1D9161B599978B1B85024FBDE888EACD3CC17", "converge_time_s": 2.001, "peers": 21, "state": "full", "uptime": 2243395}
+{"sample": 2, "utc": "2026-11-22T15:57:19.500881+00:00", "seq": 8274008, "hash": "F1542411C0824249FF1C0DFBF4224E962C04FF8D75A36979A389319C545ABA2C", "converge_time_s": 2, "peers": 21, "state": "full", "uptime": 2243425}
+{"sample": 3, "utc": "2026-11-22T15:57:49.500861+00:00", "seq": 8274018, "hash": "CBF85486542229BA9F02E728C89EC2DDBF8D059A3ED95D9640B273BA7C07FC78", "converge_time_s": 2.003, "peers": 21, "state": "full", "uptime": 2243455}
+{"sample": 4, "utc": "2026-11-22T15:58:19.500874+00:00", "seq": 8274028, "hash": "FB018F5749E7BB4D9DB08E23EBA22D79BD4DB7E10F3BBC4B7E456778F209DB72", "converge_time_s": 2, "peers": 21, "state": "full", "uptime": 2243485}
+{"sample": 5, "utc": "2026-11-22T15:58:49.500904+00:00", "seq": 8274038, "hash": "8C448B42F40F30D3A9954C15952F9E91A26201E4C06D44F731F00C2B95AF781D", "converge_time_s": 2, "peers": 21, "state": "full", "uptime": 2243515}
+CADENCE SUMMARY samples=5 seq_first=8273998 seq_last=8274038 ledgers=40 elapsed=121.3s mean_close_interval=3.000s

@@ -1,0 +1,39 @@
+{
+ "pack": "PFTL mainnet cutover readiness evidence pack",
+ "generated_at_utc": "2026-11-22T15:56:38Z",
+ "probe_window_utc": "2026-11-22: first probe 14:09-14:21Z, canonical re-probe 15:42-15:43Z, cadence re-run 15:44-15:54Z",
+ "environment": {
+  "python": "3.12.3",
+  "tools": "curl, git, python3 (stdlib only)",
+  "network": "public endpoints only; no credentials, sessions, accounts, or signing"
+ },
+ "repo_pins": {
+  "postfiatd": "0085a1ff885d6a446369cf73a4430f75af22be55 (2026-10-10, PR #50 merge, v1.0.9)",
+  "validator-history-service": "d301c4ce78e109f1771d4429e17876a97e2654f3 (2026-09-17)",
+  "postfiatl1v2": "071b6dc461efc7a9105b2d3cac6acd3686901e7d (2026-11-22)",
+  "explorer": "74161a20f200b6ad093e9d6d884fc4c370acb93c (2026-10-09)"
+ },
+ "live_endpoints": [
+  "https://rpc.testnet.postfiat.org/ (postfiatd 1.0.9, network_id 2025)",
+  "https://vhs.testnet.postfiat.org/v1/",
+  "https://explorer.testnet.postfiat.org/api/v1/",
+  "https://postfiat.org/ and https://postfiat.org/whitepaper/ (Sept 2026)",
+  "https://api.github.com/repos/postfiatorg/postfiatd/pulls/53"
+ ],
+ "counts": {
+  "findings_total": 12,
+  "by_severity": {
+   "CRITICAL": 2,
+   "HIGH": 4,
+   "MEDIUM": 3,
+   "LOW": 2,
+   "INFO": 1
+  },
+  "unresolved": 13
+ },
+ "verdict": "NOT READY for mainnet cutover: 2 CRITICAL + 4 HIGH findings, 13 explicitly unresolved claims (including 1:1 conversion, rollback, mainnet/TGE date, audit scope, amendment vote-replay proof).",
+ "notes": [
+  "Assessment only: no cutover performed, no mainnet touched, no funds spent, nothing signed.",
+  "The live postfiatd testnet (XRPL-fork, network 2025) and the postfiatl1v2 design (Consensus v2) are different systems; this pack keeps measured (live testnet) and specified (l1v2 design) claims apart throughout."
+ ]
+}

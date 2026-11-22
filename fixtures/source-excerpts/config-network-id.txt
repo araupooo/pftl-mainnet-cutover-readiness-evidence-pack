@@ -1,0 +1,29 @@
+=== postfiatd-mainnet-full.cfg: [ips] + [network_id] ===
+[ips]
+rpc.mainnet.postfiat.org 2559
+
+[peer_private]
+0
+
+[network_id]
+2026
+
+=== postfiatd-testnet-full.cfg: [ips] + [network_id] + [amendment_majority_time] ===
+[ips]
+rpc.testnet.postfiat.org 2559
+96.30.199.55 2559
+144.202.24.188 2559
+45.32.222.206 2559
+144.202.31.74 2559
+144.202.16.242 2559
+
+[peer_private]
+0
+
+[network_id]
+2025
+
+[amendment_majority_time]
+3 days
+
+#-------------------------------------------------------------------------------

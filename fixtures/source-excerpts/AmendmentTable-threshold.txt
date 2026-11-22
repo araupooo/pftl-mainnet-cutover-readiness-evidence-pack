@@ -1,0 +1,26 @@
+{
+private:
+    // How many yes votes each amendment received
+    hash_map<uint256, int> votes_;
+    Rules const& rules_;
+    // number of trusted validations
+    int trustedValidations_ = 0;
+    // number of votes needed
+    int threshold_ = 0;
+
+    void
+    computeThreshold(int trustedValidations, Rules const& rules)
+    {
+        threshold_ = !rules_.enabled(fixAmendmentMajorityCalc)
+            ? std::max(
+                  1L,
+                  static_cast<long>(
+                      (trustedValidations_ *
+                       preFixAmendmentMajorityCalcThreshold.num) /
+                      preFixAmendmentMajorityCalcThreshold.den))
+            : std::max(
+                  1L,
+                  static_cast<long>(
+                      (trustedValidations_ *
+                       postFixAmendmentMajorityCalcThreshold.num) /
+                      postFixAmendmentMajorityCalcThreshold.den));

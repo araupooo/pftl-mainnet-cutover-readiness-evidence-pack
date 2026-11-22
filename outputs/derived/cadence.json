@@ -1,0 +1,32 @@
+{
+ "samples": 21,
+ "seq_first": 8273753,
+ "seq_last": 8273951,
+ "ledgers_advanced": 198,
+ "ledgers_per_sample_interval": [
+  10,
+  9,
+  10,
+  10,
+  10,
+  10,
+  10,
+  10,
+  10,
+  10,
+  10,
+  10,
+  9,
+  10,
+  10,
+  10,
+  10,
+  10,
+  10,
+  10
+ ],
+ "mean_ledgers_per_30s": 9.9,
+ "mean_close_interval_s": 3.0303030303030303,
+ "peers_constant": true,
+ "peers_value": 21
+}

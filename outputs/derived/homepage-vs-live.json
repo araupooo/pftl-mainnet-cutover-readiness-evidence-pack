@@ -1,0 +1,13 @@
+{
+ "homepage_snapshot_date": "2026-09-21",
+ "homepage_validators": 53,
+ "homepage_verified_domains": 39,
+ "homepage_agreement_99_9_plus": 52,
+ "homepage_ledger_index_millions": 6.5,
+ "live_validators": 66,
+ "live_verified_domains": 55,
+ "live_agreement_99_9_plus": 63,
+ "live_ledger_index": 8273715,
+ "stale": true,
+ "note": "Homepage snapshot is dated 2026-09-21; live VHS/RPC figures are from the probe run. All four homepage figures disagree with live values."
+}

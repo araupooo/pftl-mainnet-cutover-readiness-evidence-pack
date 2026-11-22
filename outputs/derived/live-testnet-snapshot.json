@@ -1,0 +1,58 @@
+{
+ "probed_at_utc": "2026-11-22T15:56:38Z",
+ "build_version": "1.0.9",
+ "network_id": 2025,
+ "server_state": "full",
+ "peers": 21,
+ "validation_quorum": 17,
+ "validated_ledger_seq": 8273715,
+ "validated_ledger_hash": "809EBF07B650B763827F4BF551D5AE92D70B5EBF3022A9FFF3380B3688EECB33",
+ "complete_ledgers": "8200054-8273715",
+ "uptime_seconds": 2242537,
+ "last_close_proposers": 24,
+ "last_close_converge_time_ms": 2000,
+ "ledger_index": "8273715",
+ "ledger_close_time": "2026-Nov-22 15:42:31.000000000 UTC",
+ "ledger_close_time_iso": "2026-11-22T15:42:31Z",
+ "ledger_closed_matches": false,
+ "total_coins_drops": 99999999966558200,
+ "total_coins_pft": 99999999966.55821,
+ "base_fee_drops": "10",
+ "median_fee_drops": "5000",
+ "current_queue_size": "0",
+ "max_queue_size": "2000",
+ "reserve_base_drops": 10000000,
+ "reserve_increment_drops": 2000000,
+ "genesis_account": "r4vhrMChCsaoFsBoCkRTRGUuc1njfr7bmA",
+ "genesis_account_balance_drops": 96999999999999880,
+ "genesis_account_balance_pft": 96999999999.99988,
+ "genesis_account_sequence": 13,
+ "genesis_supply_drops_assumed": 100000000000000000,
+ "supply_reconciliation": {
+  "genesis_supply_drops": 100000000000000000,
+  "total_coins_drops": 99999999966558200,
+  "burned_by_fees_drops": 33441800,
+  "burned_by_fees_pft": 33.4418,
+  "genesis_account_balance_drops": 96999999999999880,
+  "other_accounts_drops": 2999999966558320,
+  "other_accounts_pft": 2999999966.55832,
+  "closes": true
+ },
+ "xrpl_genesis_account_found": false,
+ "xrpl_genesis_account_error": "actNotFound",
+ "xrpl_root_account_found": false,
+ "xrpl_root_account_error": "actNotFound",
+ "admin_methods_blocked": {
+  "validators": "Forbidden",
+  "peers": "Forbidden"
+ },
+ "unknown_method": {
+  "error": "unknownCmd",
+  "error_code": 32,
+  "error_message": "Unknown method.",
+  "request": {
+   "command": "no_such_method"
+  },
+  "status": "error"
+ }
+}
